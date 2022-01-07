@@ -12,5 +12,15 @@ while(*argv[i]!=NULL)
   ++i;}
 
 
+printf("Funkcja:\n");
+printf("\tPrototyp:\n");
+printf("\t\tplik od linia do linia\n");
+printf("\tDefinicja:\n");
+printf("\t\tplik od linia do linia\n");
+printf("\tUzycie:\n");
+printf("\t\tplik od linia do linia\n");
+printf("\tWywoluje:\n");
+printf("\t\tplik od linia do linia\n");
+
 return 0;
 }
