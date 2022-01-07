@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "fun_stack.h"
 
-int top_of_funstack( void ){
+int top_of_funstack(funstack top){
     if(top == NULL){
         printf("Stos jest pusty!");
         return 1;
@@ -12,7 +12,7 @@ int top_of_funstack( void ){
     }
 }
 
-void put_on_fun_stack( int par_level, char *funame ){
+void put_on_fun_stack(funstack top, int par_level, char *funame ){
     if(top == NULL){
         top = malloc(sizeof(top));
         top->par_level = par_level;
@@ -29,7 +29,7 @@ void put_on_fun_stack( int par_level, char *funame ){
     }
 }
 
-char *get_from_fun_stack( void ){
+char *get_from_fun_stack( funstack top ){
     if(top == NULL){
         printf("Stos jest pusty!");
         return "blad";
@@ -43,4 +43,3 @@ char *get_from_fun_stack( void ){
         return tmp;
     }
 }
-
