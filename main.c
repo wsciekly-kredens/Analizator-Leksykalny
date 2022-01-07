@@ -5,6 +5,8 @@
 
 int main(int argc, char **argv){
 int i=1;
+if(*argv[1]==NULL)
+  fprintf(stderr, "Blad - nie moge czytac pliku!\n");
 while(*argv[i]!=NULL)
  {analizatorSkladni (*argv[i]);
   ++i;}
