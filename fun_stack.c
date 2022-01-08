@@ -45,12 +45,3 @@ char *get_from_fun_stack( void ){
         return tmp;
     }
 }
-
-int main(){
-    top = NULL;
-    put_on_fun_stack(3,"kot");
-    put_on_fun_stack(5,"pies");
-    printf("%s",get_from_fun_stack());
-    printf("%s",get_from_fun_stack());
-    return 0;
-}
