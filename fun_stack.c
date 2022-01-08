@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "fun_stack.h"
 
+funstack top;
+
 int top_of_funstack( void ){
     if(top == NULL){
         printf("Stos jest pusty!");
@@ -43,4 +45,3 @@ char *get_from_fun_stack( void ){
         return tmp;
     }
 }
-
