@@ -62,6 +62,8 @@ lexem_t alex_nextLexem( void ) {
                 }
      else if( isdigit( c ) || c == '.' ) {
       /* liczba */
+      while (isdigit( c ) || c == '.')
+        {c=fgetc(ci);}
       return OTHER;
                 }
      else 
