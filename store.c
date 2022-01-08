@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include "store.h"
 
-store *funkcje;
 static int i = 0;
 
 void store_add_def(char *fun, int ln, char *ipname){

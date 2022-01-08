@@ -10,6 +10,8 @@ typedef struct store{
     char *type; //typ pojawienia się
 } *store; //struktura do przechowywania informacji i jednym konkretnym pojawieniu się funckcji
 
+store *funkcje;
+
 void store_add_def(char *fun, int ln, char *ipname);
 void store_add_proto(char *fun, int ln, char *ipname);
 void store_add_call(char *fun, int ln, char *ipname);
