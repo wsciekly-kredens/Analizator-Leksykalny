@@ -20,8 +20,6 @@ void put_on_fun_stack( int par_level, char *funame ){
         top->par_level = par_level;
         top->funame = funame;
         top->next = NULL;
-        printf("%d\n",top);
-        printf("%s\n",top->funame);
     }
     else{
         funstack newElem;
