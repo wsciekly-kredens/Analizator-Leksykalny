@@ -15,7 +15,6 @@ int top_of_funstack( void ){
 
 void put_on_fun_stack( int par_level, char *funame ){
     if(top == NULL){
-        printf("%d\n",top);
         top = malloc(sizeof(top));
         top->par_level = par_level;
         top->funame = funame;
