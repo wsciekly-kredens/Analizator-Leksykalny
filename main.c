@@ -2,11 +2,6 @@
 #include <stdlib.h> // exit - ale exit trzeba kiedyś usunąć i nie będzie to potrzebne
 #include "alex.h"       // analizator leksykalny                                     
 #include "fun_stack.h" // stos funkcji
-#include "store.h"
-#include "analizatorSkladni.h"
-
- #include "alex.h"
-
 #include <ctype.h>
 #include <string.h>
 
@@ -14,10 +9,21 @@ static int  ln= 0;
 static char ident[256];
 static FILE *ci= NULL;
 
+
+typedef struct store{
+    char *fun;
+    int ln;
+    char *ipname;
+    char *type; //typ pojawienia się
+} *store; //struktura do przechowywania informacji i jednym konkretnym pojawieniu się funckcji
+
+store *funkcje;
+
 void    alex_init4file( FILE *in ) {
    ln= 0;
    ci= in;
 }
+
 int  isKeyword(char* str)
 {
     if (!strcmp(str, "auto") || !strcmp(str, "default") 
